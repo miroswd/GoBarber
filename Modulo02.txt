@@ -1,0 +1,29 @@
+Crio a pasta onde será armezenado o projeto
+
+>>> yarn init -y
+>>> yarn add express
+
+// Configurando a estrutura
+Crio a pasta src -> Centraliza o código da aplicação
+
+Crio 3 arquivos
+ - app.js    -> Configuro o servidor express
+ - server.js -> Servidor
+ - routes.js -> Rotas
+
+// APP.js
+Basicamente crio uma class, que terá que fazer a união e o direcionamento
+dos arquivos, para que eles conversem entre si
+
+Exportada a variável server, que recebe express, e é importada dentro de server.js
+
+// Server.js
+Controlo o servidor localhost:3333
+
+// Routes.js
+Rotas do app
+
+Os arquivos que são importados em algum lugar, devem ser exportados
+
+Classes com o método constructor, devem ser exportadas como new, para invocar o método
+
