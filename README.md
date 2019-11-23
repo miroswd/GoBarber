@@ -17,6 +17,6 @@ Com yarn e node instalados na máquina:
 </p>
 
 ```js
-  $ yarn               #Instala as dependências 
+  $ yarn #Instala as dependências 
   $ node src/server.js #Inicia o servidor
 ```
