@@ -8,6 +8,8 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
 <ul>
   <li>Express</li>
   <li>Node</li>
+  <li>Nodemon</li>
+  <li>Sucrase</li>
   <li>Yarn</li>
 </ul>
 
