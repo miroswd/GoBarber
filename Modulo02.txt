@@ -44,3 +44,19 @@ antes de inicializar a app
 // Configurando o debug com sucrase
   adicionado o devDebug ao package json
   criando uma configuração no script de config do debug
+
+/// Docker
+Controla os serviços externos da aplicação
+Cria ambientes isolados, sem mexer em qualquer arquivo
+
+imagem    -> serviço/ferramentas
+container -> instância de uma imagem
+Docker Registry(Docker Hub)  -> Nuvem com as imagens do docker
+
+// Postgres
+https://hub.docker.com/_/postgres
+sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11
+
+// POSTBIRD -Interface visual para visualizar o postgres
+sudo docker ps -a => exibir os todos os containers
+sudo docker start database(nome da imagem)
