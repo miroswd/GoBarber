@@ -27,3 +27,20 @@ Os arquivos que são importados em algum lugar, devem ser exportados
 
 Classes com o método constructor, devem ser exportadas como new, para invocar o método
 
+// Adicionando o sucrase para o uso de import/export
+>>> yarn add sucrase nodemon -D
+trocar os const = require por import from
+module.exports = passa a se export default
+
+rondando >>> yarn sucrase-node src/server.js
+necessário configurar o nodemon(Detecta alterações no código e reinicia o servidor)
+no package -> scripts: dev= nodemon src/server.js
+BUT, o import e export são funcionalidades do sucrase
+
+Criar um arquivo nodemon.json -> para todo arquivo com extensão js, registra o sucrase 
+antes de inicializar a app
+
+
+// Configurando o debug com sucrase
+  adicionado o devDebug ao package json
+  criando uma configuração no script de config do debug
