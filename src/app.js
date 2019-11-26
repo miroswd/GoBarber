@@ -1,5 +1,5 @@
-const express = require('express');
-const routes = require('./routes'); // import o valor exportado de /routes e nomeio ele
+import express from 'express';
+import routes from './routes' // importo o valor exportado de /routes e nomeio ele
 
 class App{
   constructor(){
@@ -25,6 +25,6 @@ class App{
 
 }
 
-module.exports = new App().server // Preciso exportar uma variável, que será pega em um dos arquivos
+export default new App().server // Preciso exportar uma variável, que será pega em um dos arquivos
 
 // Para exportar uma class com o método constructor, preciso invocar com o new
