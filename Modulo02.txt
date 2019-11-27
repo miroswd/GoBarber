@@ -37,7 +37,7 @@ necessário configurar o nodemon(Detecta alterações no código e reinicia o se
 no package -> scripts: dev= nodemon src/server.js
 BUT, o import e export são funcionalidades do sucrase
 
-Criar um arquivo nodemon.json -> para todo arquivo com extensão js, registra o sucrase 
+Criar um arquivo nodemon.json -> para todo arquivo com extensão js, registra o sucrase
 antes de inicializar a app
 
 
@@ -82,3 +82,18 @@ crio um arquivo .prettierrc // Sobrescrever algumas das regras de integração d
 // EditorConfig -> Caso os devs usem editores diferentes
 plugin == editor config
 na raiz do projeto, botão direito -> generate.editorconfig
+
+
+// Configurando o sequelize
+Crio as pastas config, database/migrations e app/models app/controllers
+
+>>> yarn add sequelize
+>>> yarn add sequelize-cli -D //Interface de linha de comando
+
+crio um arquivo de config do sequelize (.sequelizerc)
+O arquivo sequelize, a interface não interpreta o import/export, logo os arquivos q ele irá acessar
+e os acessados por ele, devem ser através de const/require (commomJs)
+
+//configurando o database
+No postgres é necessário instalar 2 dependências
+>>> yarn add pg pg-hstore
