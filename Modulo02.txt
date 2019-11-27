@@ -60,3 +60,25 @@ sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 54
 // POSTBIRD -Interface visual para visualizar o postgres
 sudo docker ps -a => exibir os todos os containers
 sudo docker start database(nome da imagem)
+
+
+/// PADRONIZAÇÃO
+//ESLINT - com plugin
+>>> yarn add eslint -D // Verifica se o código está seguindo o padrão
+>>> yarn eslint --init // inicializar arquivo de configuração
+      por padrão, é instalado através do npm, q irá criar um arquivo package-lock, apenas deletar
+
+>>> yarn // instalar todas as dependências no yarn.lock
+
+Foi criado um .eslintrc.js -> Configurações do eslint
+
+//Prettier
+>>> yarn add prettier eslint-config-prettier eslint-plugin-prettier -D // Integração do prettier com o eslint
+crio um arquivo .prettierrc // Sobrescrever algumas das regras de integração do prettier com o eslint
+
+// Aplicando as regras do eslint em vários arquivos
+>>> yarn eslint --fix src --ext .js
+
+// EditorConfig -> Caso os devs usem editores diferentes
+plugin == editor config
+na raiz do projeto, botão direito -> generate.editorconfig
