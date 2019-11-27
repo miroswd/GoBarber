@@ -6,9 +6,12 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
 
 <h2>Ferramentas</h2>
 <ul>
+  <li>EditorConfig</li>
+  <li>Eslint</li>
   <li>Express</li>
   <li>Node</li>
   <li>Nodemon</li>
+  <li>Prettier</li>
   <li>Sucrase</li>
   <li>Yarn</li>
 </ul>
