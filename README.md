@@ -6,12 +6,16 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
 
 <h2>Ferramentas</h2>
 <ul>
+  <li>Docker</li>
   <li>EditorConfig</li>
   <li>Eslint</li>
   <li>Express</li>
   <li>Node</li>
   <li>Nodemon</li>
+  <li>PostBird</li>
+  <li>Postgres</li>
   <li>Prettier</li>
+  <li>Sequelize</li>
   <li>Sucrase</li>
   <li>Yarn</li>
 </ul>
