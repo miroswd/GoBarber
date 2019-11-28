@@ -118,3 +118,15 @@ no postbird, atualizar o datase
 
 /// Criando o model de usuário
 Receberá os dados inputados pelo usuário
+
+
+/// Criando a conexão com o banco de dados (loader de models)
+dentro de database criar o arquivo index.js
+No arquivo index.js, será criada uma variável responsável pela conexão
+essa variável será esperada dentro dos Models
+
+Crio um array com todos os models, esse array será percorrido e terá uma modificação
+e será retornado com o valor modificado
+
+Preciso chamar o arquivo de database no app.js
+rodo o servidor, e ao acessar o localhost:3333, será armazenado no database

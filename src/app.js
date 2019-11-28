@@ -1,6 +1,8 @@
 import express from 'express';
 import routes from './routes'; // importo o valor exportado de /routes e nomeio ele
 
+import './database'; // Como nenhum valor será retornado, basta importar
+
 class App {
   constructor() {
     this.server = express();
