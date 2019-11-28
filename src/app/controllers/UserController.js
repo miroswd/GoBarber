@@ -18,10 +18,8 @@ class UserController {
       pegar tudo de novo através do req.body
     */
 
-    const { name, email, password_hash, provider } = await User.create(
-      req.body
-    );
-    return res.json({ name, email, password_hash, provider });
+    const { name, email, provider } = await User.create(req.body);
+    return res.json({ name, email, provider });
   }
 }
 
