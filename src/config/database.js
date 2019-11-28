@@ -4,7 +4,7 @@ module.exports = {
   host: 'localhost',
   username: 'postgres',
   password: 'docker',
-  datase: 'gobarber',
+  database: 'gobarber',
   define: {
     timestamps: true, // createAt e updateAt
     underscored: true, // Usando underscore nas tabelas ao invés de camelCase

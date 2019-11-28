@@ -97,3 +97,21 @@ e os acessados por ele, devem ser através de const/require (commomJs)
 //configurando o database
 No postgres é necessário instalar 2 dependências
 >>> yarn add pg pg-hstore
+
+
+//Migration de usuario
+Usando o sequelize-cli, para facilitar a criação da migration
+>>> yarn sequelize migration:create --name=create-users
+
+criado um arquivo na pasta de migrations
+método up (quando a migration for executada)
+método down (para fazer rollback -Update,deletar a migration)
+
+Defino as especificações de cada campo da tabela
+
+rodando a migration
+>>> yarn sequelize db:migrate
+
+no postbird, atualizar o datase
+
+>>> yarn sequelize db:migrate:undo //Desfaz a última migrate
