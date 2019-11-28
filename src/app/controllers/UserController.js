@@ -12,6 +12,7 @@ class UserController {
       return res.status(400).json({ error: 'User already exists' });
     }
 
+
     /*
       como já foi definido que o usuário preencherá
       nome, email e pass, não tem a necessidade de
@@ -20,6 +21,7 @@ class UserController {
 
     const { name, email, provider } = await User.create(req.body);
     return res.json({ name, email, provider });
+
   }
 }
 
