@@ -12,12 +12,6 @@ class UserController {
       return res.status(400).json({ error: 'User already exists' });
     }
 
-    /*
-      como já foi definido que o usuário preencherá
-      nome, email e pass, não tem a necessidade de
-      pegar tudo de novo através do req.body
-    */
-
     const { name, email, password_hash, provider } = await User.create(
       req.body
     );
