@@ -6,6 +6,7 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
 
 <h2>Ferramentas</h2>
 <ul>
+  <li>Bcryptjs</li>
   <li>Docker</li>
   <li>EditorConfig</li>
   <li>Eslint</li>
