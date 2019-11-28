@@ -115,3 +115,6 @@ rodando a migration
 no postbird, atualizar o datase
 
 >>> yarn sequelize db:migrate:undo //Desfaz a última migrate
+
+/// Criando o model de usuário
+Receberá os dados inputados pelo usuário
