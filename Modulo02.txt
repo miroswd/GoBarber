@@ -130,3 +130,10 @@ e será retornado com o valor modificado
 
 Preciso chamar o arquivo de database no app.js
 rodo o servidor, e ao acessar o localhost:3333, será armazenado no database
+
+
+/// Feature de criação do usuário - Registro de usuário dentro da API
+Crio um controller, para a criação do usuario, que receberá as informações através do req.body
+Valido se o email é único, e retorno os valores
+
+através das rotas, eu importo o controller
