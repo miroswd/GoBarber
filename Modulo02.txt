@@ -137,3 +137,9 @@ Crio um controller, para a criação do usuario, que receberá as informações 
 Valido se o email é único, e retorno os valores
 
 através das rotas, eu importo o controller
+
+
+/// Gerando o hash da password == criptografando
+>>> yarn add bcryptjs
+
+No model de usuário, criar um campo virtual
