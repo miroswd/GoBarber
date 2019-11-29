@@ -165,3 +165,5 @@ feitas essas verificações, retorno um token com as propriedades
 MD5online -> gero um token aleatório ("8538607221f2e42284acf599214cfa34")
 
 Por padrão, o token tem um tempo de expiração
+
+// Separando a parte de autenticação
