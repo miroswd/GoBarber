@@ -5,6 +5,7 @@ import User from './app/models/User';
 
 // Importando Controllers
 import UserController from './app/controllers/UserController';
+import SessionController from './app/controllers/SessionController';
 
 // Pegando apenas o router de express
 const routes = new Router();
@@ -19,5 +20,6 @@ routes.get('/teste', async (req, res) => {
 });
 
 routes.post('/users', UserController.store);
+routes.post('/sessions', SessionController.store);
 
 export default routes; // Será importado em app.js como global
