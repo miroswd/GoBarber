@@ -28,6 +28,10 @@ class User extends Model {
     automaticamente, baseado em ações q acontecem no model
     */
   }
+
+  checkPassword(password) {
+    return bcrypt.compare(password, this.password_hash); // Return true or false
+  }
 }
 
 export default User;

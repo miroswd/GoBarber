@@ -143,3 +143,25 @@ através das rotas, eu importo o controller
 >>> yarn add bcryptjs
 
 No model de usuário, criar um campo virtual
+
+
+
+/*** Conceitos JWT ***/
+Json Web Token
+Passo os dados para autenticação, a rota busca as informações, se estiver correto vair gerar
+um token JWT
+FORMATO: criptografado
+até o primeiro ponto => headers, qual tipo de token foi rodado, qual o tipo de criptografia
+até o segundo pont => payload, dados adicionais, id por exemplo
+até o terceiro => assinatura, impossibilita o burlamento do token
+
+/// Autenticação com JWT
+Criado um sessionController
+>>> yarn add jsonwebtoken
+crio validações de email e senha
+no model do user, faço a comparação entre a senha sendo passada com a senha armazenada no database
+feitas essas verificações, retorno um token com as propriedades
+
+MD5online -> gero um token aleatório ("8538607221f2e42284acf599214cfa34")
+
+Por padrão, o token tem um tempo de expiração
