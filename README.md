@@ -11,6 +11,7 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
   <li>EditorConfig</li>
   <li>Eslint</li>
   <li>Express</li>
+  <li>JWT -JsonWebtoken</li>
   <li>Node</li>
   <li>Nodemon</li>
   <li>PostBird</li>
