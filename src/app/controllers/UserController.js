@@ -23,6 +23,11 @@ class UserController {
     return res.json({ name, email, provider });
 
   }
+
+  // Rota de atualização, é necessário estar autenticado
+  async update(req, res) {
+    return res.json({ ok: true });
+  }
 }
 
 export default new UserController();
