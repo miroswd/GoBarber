@@ -180,3 +180,10 @@ o auth.js -> deve verificar se o usuário está autenticado
 no Insomnia -> auth -> bearer token -> colar o token
 
 /// Update do usuário
+foram criadas validações que permitem o usuário alterar seus dados, apenas se ele estiver autenticado
+
+
+// Validando dados de entrada
+>>> yarn add yup //schema validation, passando através de funções o tipo de validação
+Aplicados no UserController e sessionController, pois receberão os dados através do req.body
+
