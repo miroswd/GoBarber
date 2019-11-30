@@ -20,6 +20,7 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
   <li>Sequelize</li>
   <li>Sucrase</li>
   <li>Yarn</li>
+  <li>Yup</li>
 </ul>
 
 <h2>Inicialização</h2>
