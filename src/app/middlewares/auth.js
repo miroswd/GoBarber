@@ -21,7 +21,7 @@ export default async (req, res, next) => {
     // console.log(decoded); // retorna os dados do token
 
     req.userId = decoded.Id; // Usuário responsável pelo token
-
+    // Será passado na URL
     return next();
   } catch (err) {
     return res.status(401).json({ error: 'Token invalid' });
