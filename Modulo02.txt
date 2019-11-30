@@ -179,3 +179,4 @@ o auth.js -> deve verificar se o usuário está autenticado
 
 no Insomnia -> auth -> bearer token -> colar o token
 
+/// Update do usuário
