@@ -32,3 +32,8 @@ Com yarn e node instalados na máquina:
   $ yarn #Instala as dependências 
   $ node src/server.js #Inicia o servidor
 ```
+<p>Rodar o Docker:</p>
+
+```js
+  $ sudo docker start database
+```
