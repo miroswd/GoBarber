@@ -174,4 +174,8 @@ O código gerado pelo md5 e o tempo de expiração, forma separados em outro arq
 -- Bloqueando o usuário caso ele não esteja logado
 criado o método update no UserController
 
-criar um diretório de Middleware
+criar um diretório de Middleware dentro de app
+o auth.js -> deve verificar se o usuário está autenticado
+
+no Insomnia -> auth -> bearer token -> colar o token
+

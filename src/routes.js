@@ -7,6 +7,9 @@ import User from './app/models/User';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 
+// Importando middlewares
+import authMiddleware from './app/middlewares/auth';
+
 // Pegando apenas o router de express
 const routes = new Router();
 
@@ -21,6 +24,8 @@ routes.get('/teste', async (req, res) => {
 
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store); // Login - autenticação
+
+routes.use(authMiddleware); // Aplica em todas as rotaas abaixo
 
 routes.put('/users', UserController.update);
 
