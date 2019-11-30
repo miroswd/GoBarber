@@ -20,6 +20,8 @@ routes.get('/teste', async (req, res) => {
 });
 
 routes.post('/users', UserController.store);
-routes.post('/sessions', SessionController.store);
+routes.post('/sessions', SessionController.store); // Login - autenticação
+
+routes.put('/users', UserController.update);
 
 export default routes; // Será importado em app.js como global

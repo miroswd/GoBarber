@@ -167,3 +167,11 @@ MD5online -> gero um token aleatório ("8538607221f2e42284acf599214cfa34")
 Por padrão, o token tem um tempo de expiração
 
 // Separando a parte de autenticação
+O código gerado pelo md5 e o tempo de expiração, forma separados em outro arquivo, na config
+
+
+///Middleware de autenticação
+-- Bloqueando o usuário caso ele não esteja logado
+criado o método update no UserController
+
+criar um diretório de Middleware
