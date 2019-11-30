@@ -26,7 +26,31 @@ class UserController {
 
   // Rota de atualização, é necessário estar autenticado
   async update(req, res) {
-    return res.json({ ok: true });
+    const { email, oldPassword } = req.body;
+
+    // Buscando o usuário no banco de dados
+    const user = await User.findByPk(req.userId); // primaryKey
+
+    if (email && email !== user.email) {
+      const userExists = await User.findOne({ where: { email } });
+      if (userExists) {
+        return res.status(400).json({ error: 'email already exists' });
+      }
+    }
+
+    if (oldPassword && !(await user.checkPassword(oldPassword))) {
+      // Só verifica se o usuário informar a oldPassword
+      return res.status(401).json({ error: 'Password does not match' });
+    }
+
+    const { id, name, provider } = await user.update(req.body);
+
+    return res.json({
+      id,
+      name,
+      email,
+      provider,
+    });
   }
 }
 
