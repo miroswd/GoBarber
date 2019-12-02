@@ -152,8 +152,8 @@ Passo os dados para autenticação, a rota busca as informações, se estiver co
 um token JWT
 FORMATO: criptografado
 até o primeiro ponto => headers, qual tipo de token foi rodado, qual o tipo de criptografia
-até o segundo pont => payload, dados adicionais, id por exemplo
-até o terceiro => assinatura, impossibilita o burlamento do token
+até o segundo ponto  => payload, dados adicionais, id por exemplo
+até o terceiro ponto => assinatura, impossibilita o burlamento do token
 
 /// Autenticação com JWT
 Criado um sessionController
