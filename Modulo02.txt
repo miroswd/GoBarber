@@ -25,8 +25,6 @@ Rotas do app
 
 Os arquivos que são importados em algum lugar, devem ser exportados
 
-Classes com o método constructor, devem ser exportadas como new, para invocar o método
-
 // Adicionando o sucrase para o uso de import/export
 >>> yarn add sucrase nodemon -D
 trocar os const = require por import from
