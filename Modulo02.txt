@@ -99,7 +99,7 @@ No postgres é necessário instalar 2 dependências
 >>> yarn add pg pg-hstore
 
 
-//Migration de usuario
+//Migration de usuário
 Usando o sequelize-cli, para facilitar a criação da migration
 >>> yarn sequelize migration:create --name=create-users
 
@@ -112,7 +112,7 @@ Defino as especificações de cada campo da tabela
 rodando a migration
 >>> yarn sequelize db:migrate
 
-no postbird, atualizar o datase
+no postbird, atualizar o database
 
 >>> yarn sequelize db:migrate:undo //Desfaz a última migrate
 
