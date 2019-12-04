@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import multer from 'multer';
+import multerConfig from './config/multer';
 
 // Importando Models
 import User from './app/models/User';
@@ -10,8 +12,8 @@ import SessionController from './app/controllers/SessionController';
 // Importando middlewares
 import authMiddleware from './app/middlewares/auth';
 
-// Pegando apenas o router de express
 const routes = new Router();
+const upload = multer(multerConfig);
 
 routes.get('/teste', async (req, res) => {
   const user = await User.create({
@@ -28,5 +30,8 @@ routes.post('/sessions', SessionController.store); // Login - autenticação
 routes.use(authMiddleware); // Aplica em todas as rotaas abaixo
 
 routes.put('/users', UserController.update);
+routes.post('/files', upload.single('file'), (req, res) => {
+  return res.json({ ok: true });
+});
 
 export default routes; // Será importado em app.js como global
