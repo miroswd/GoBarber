@@ -23,10 +23,11 @@ class User extends Model {
         user.password_hash = await bcrypt.hash(user.password, 8);
       }
     });
-    return this; // Retorna o model que acabou de ser inicializado
     /* trechos de código que são executados
     automaticamente, baseado em ações q acontecem no model
     */
+
+    return this; // Retorna o model que acabou de ser inicializado
   }
 
   checkPassword(password) {

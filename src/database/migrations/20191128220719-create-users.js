@@ -23,7 +23,7 @@ module.exports = {
       provider: {
         // Quando for o prestador de serviço: true
         type: Sequelize.BOOLEAN,
-        defaultValue: false,
+        defaultValue: false, // Por padrão o usuário é um cliente
         allowNull: false,
       },
       created_at: {

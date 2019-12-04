@@ -1,4 +1,4 @@
-// Configrações da parte de autenticação
+// Configurações da parte de autenticação
 export default {
   secret: '8538607221f2e42284acf599214cfa34',
   expiresIn: '7d',

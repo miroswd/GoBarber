@@ -12,7 +12,7 @@ export default async (req, res, next) => {
   }
 
   // Separando Bearer de Token
-  const [, token] = authHeader.split(' ');
+  const [, token] = authHeader.split(' '); // Separa em um array a partir de espaço
 
   // Comparando os tokens
 

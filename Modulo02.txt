@@ -185,3 +185,14 @@ foram criadas validações que permitem o usuário alterar seus dados, apenas se
 >>> yarn add yup //schema validation, passando através de funções o tipo de validação
 Aplicados no UserController e sessionController, pois receberão os dados através do req.body
 
+
+///////// Módulo 3 ///////////
+
+//Configurando o Multer
+Funcionalidade de upload de arquivos
+Para mandar arquivos físicos em json, precisa de um multform part data
+
+>>> yarn add multer
+criar a pasta temp/uploads, fora da src
+
+src/config/multer.js
