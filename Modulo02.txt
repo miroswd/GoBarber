@@ -196,3 +196,25 @@ Para mandar arquivos físicos em json, precisa de um multform part data
 criar a pasta temp/uploads, fora da src
 
 src/config/multer.js
+
+no Insomnia
+selecionar a opção multipart, jogar o file(nomeado na rota como 'file') e buscar por file
+
+
+// Salvando o avatar no banco de dados
+Quando o multer age sobre um rota, ele retorna um req.file // retorna todos os dados do arquivo
+
+Preciso criar uma nova tabela no banco de dados
+Crio o model
+
+Crio um fileController
+importo nas rotas
+
+/// Relacionando a tabela de usuário com o file
+Criando uma nova migration
+
+No postbird foi criado um campo avatar_id, q é possível referenciar o id do file com o usuário
+O id do file precisa ser salvo no banco de dados, passado através do Insomnia
+O model do usuário não tem a coluna avatar_id, por isso deve ser referenciado em models de user
+
+conectar com o banco de dados
