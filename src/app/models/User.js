@@ -30,6 +30,14 @@ class User extends Model {
     return this; // Retorna o model que acabou de ser inicializado
   }
 
+  // Salvando o id do file na tabela users
+  static associate(models) {
+    this.belongsTo(/* pertence a */ models.File, {
+      foreignKey:
+        'avatar_id' /* Qual o nome da coluna q vai armazenar a referência do arquivo */,
+    });
+  }
+
   checkPassword(password) {
     return bcrypt.compare(password, this.password_hash); // Return true or false
   }
