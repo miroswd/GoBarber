@@ -226,3 +226,16 @@ Crio um controller q lista(index)
 Depois de retornar os valores do prestador, e name/path do avatar
 Gerar a url da imagem, dentro de file
 Servindo arquivos estáticos, isso no app.js, para abrir diretamente no navegador
+
+///Criando registro de agendamento no banco de dados
+Criando a migration
+>>> yarn sequelize migration:create --name=create-appointments
+passo como referencia o model de usuário
+
+-criando o model
+Não preciso referenciar, no super.init, os campos id/user_id, pois quando é referenciado, ele cria automaticamente
+
+importar o model no index.js
+
+Obs:Quando uma tabela tem relacionamento com 2 models, sou obrigado a dar apelido para o relacionamento, usando o as:
+
