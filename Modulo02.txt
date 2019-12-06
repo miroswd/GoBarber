@@ -220,3 +220,9 @@ O id do file precisa ser salvo no banco de dados, passado através do Insomnia
 O model do usuário não tem a coluna avatar_id, por isso deve ser referenciado em models de user
 
 conectar com o banco de dados
+
+/// Listando todos os prestadores de serviço
+Crio um controller q lista(index)
+Depois de retornar os valores do prestador, e name/path do avatar
+Gerar a url da imagem, dentro de file
+Servindo arquivos estáticos, isso no app.js, para abrir diretamente no navegador

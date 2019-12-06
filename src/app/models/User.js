@@ -32,10 +32,14 @@ class User extends Model {
 
   // Salvando o id do file na tabela users
   static associate(models) {
-    this.belongsTo(/* pertence a */ models.File, {
-      foreignKey:
-        'avatar_id' /* Qual o nome da coluna q vai armazenar a referência do arquivo */,
-    });
+    this.belongsTo(
+      models.File,
+      /* pertence a */ {
+        foreignKey:
+          'avatar_id' /* Qual o nome da coluna q vai armazenar a referência do arquivo */,
+        as: 'avatar', // Codenome, para retornar para o frontend
+      }
+    );
   }
 
   checkPassword(password) {
