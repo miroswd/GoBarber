@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import routes from './routes'; // importo o valor exportado de /routes e nomeio ele
 
 import './database'; // Como nenhum valor será retornado, basta importar
@@ -13,6 +14,12 @@ class App {
 
   middlewares() {
     this.server.use(express.json()); // Middleware Global
+
+    // Aceita apenas o método get
+    this.server.use(
+      '/files',
+      express.static(path.resolve(__dirname, '..', 'temp', 'uploads'))
+    ); // A rota q vai servir o arquivo estático
   }
 
   routes() {
