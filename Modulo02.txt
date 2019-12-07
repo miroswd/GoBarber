@@ -237,3 +237,9 @@ importar o model no index.js
 
 Obs:Quando uma tabela tem relacionamento com 2 models, sou obrigado a dar apelido para o relacionamento, usando o as:
 
+/// Criando a rota para criar o agendamento do serviço, entre usuário e prestador
+Criando o controller
+Se assegurar que o usuário não seja um provider
+Passar o usuário com quem quer marcar
+provider_id:3
+data -> "date":"2019-07-01T18:00:00-03:00" (passando com a timezone)
