@@ -6,6 +6,7 @@ import multerConfig from './config/multer';
 import User from './app/models/User';
 
 // Importando Controllers
+import AppointmentController from './app/controllers/AppointmentController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import UserController from './app/controllers/UserController';
@@ -26,13 +27,21 @@ routes.get('/teste', async (req, res) => {
   return res.json(user);
 });
 
+// Criando usuário
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store); // Login - autenticação
 
-routes.use(authMiddleware); // Aplica em todas as rotaas abaixo
+// Autenticação
+routes.use(authMiddleware); // Aplica em todas as rotas abaixo
 
-routes.get('/providers', ProviderController.index);
-routes.put('/users', UserController.update);
+// Criação
+routes.post('/appointments', AppointmentController.store);
 routes.post('/files', upload.single('file'), FileController.store);
+
+// Exibição
+routes.get('/providers', ProviderController.index);
+
+// Atualização
+routes.put('/users', UserController.update);
 
 export default routes; // Será importado em app.js como global
