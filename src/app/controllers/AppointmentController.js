@@ -3,9 +3,39 @@ import { startOfHour, parseISO, isBefore } from 'date-fns';
 
 // Importando models
 import Appointment from '../models/Appointments';
+import File from '../models/File';
 import User from '../models/User';
 
 class AppointmentController {
+  // Listando agendamentos do usuário
+  async index(req, res) {
+    const appointments = await Appointment.findAll({
+      where: { user_id: req.userId, canceled_at: null },
+
+      // Ordenando os agendamentos por data
+      order: ['date'],
+      attributes: ['id', 'date'],
+      // Incluindo os dados do prestador
+      include: [
+        {
+          model: User,
+          as: 'provider',
+          attributes: ['id', 'name'],
+          // Avatar
+          include: [
+            {
+              model: File,
+              as: 'avatar',
+              attributes: ['path', 'url'], // Como a url depende da variável path, precisa ser passada aqui tmb
+            },
+          ],
+        },
+      ],
+    });
+    return res.json(appointments);
+  }
+
+  // Criando agendamentos
   async store(req, res) {
     // Validando os dados de entrada
     const schema = Yup.object().shape({
