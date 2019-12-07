@@ -249,3 +249,5 @@ Analisar se a data é futura, se já o horário está disponível
 
 >>> yarn add date-fns@next
                      @next -> versão mais atual da biblioteca
+
+// Listando todos os agendamentos do usuário

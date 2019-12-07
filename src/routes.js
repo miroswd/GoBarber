@@ -39,6 +39,7 @@ routes.post('/appointments', AppointmentController.store);
 routes.post('/files', upload.single('file'), FileController.store);
 
 // Exibição
+routes.get('/appointments', AppointmentController.index);
 routes.get('/providers', ProviderController.index);
 
 // Atualização
