@@ -243,3 +243,9 @@ Se assegurar que o usuário não seja um provider
 Passar o usuário com quem quer marcar
 provider_id:3
 data -> "date":"2019-07-01T18:00:00-03:00" (passando com a timezone)
+
+// Validando o agendamento
+Analisar se a data é futura, se já o horário está disponível
+
+>>> yarn add date-fns@next
+                     @next -> versão mais atual da biblioteca
