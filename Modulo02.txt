@@ -251,3 +251,7 @@ Analisar se a data é futura, se já o horário está disponível
                      @next -> versão mais atual da biblioteca
 
 // Listando todos os agendamentos do usuário
+Criado o método index no controller
+
+///Aplicando a paginação
+Através de query, no insominia, fixar um parâmetro
