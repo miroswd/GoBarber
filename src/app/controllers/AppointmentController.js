@@ -9,12 +9,19 @@ import User from '../models/User';
 class AppointmentController {
   // Listando agendamentos do usuário
   async index(req, res) {
+    const { page = 1 } = req.query;
+
     const appointments = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
 
       // Ordenando os agendamentos por data
       order: ['date'],
       attributes: ['id', 'date'],
+      limit: 20,
+      offset: (page - 1) * 20,
+      /* Quantos registros quero pular, para exibir na page,
+      se estiver na página 2, pula os primeiros 20 registros e exibir a partir do 21 */
+
       // Incluindo os dados do prestador
       include: [
         {
