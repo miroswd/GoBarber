@@ -259,9 +259,23 @@ Criado o método index no controller
 Através de query, no insominia, fixar um parâmetro
 
 
-
 /// Listando agenda do prestador
 Criar o ScheduleController
 Autenticar-se como provider
 Fazer uma verificação, para ver se o usuario é realmente um provider
 através de query, exibir o dia que quer ver os agendamentos, passar todo o formato da timezone, mas utilizar apenas a data
+
+/// Conectando a aplicação com um banco não relacional - MongoDb
+-> Dados não estruturados
+-> Sem relacionamento
+-> Extremamente performático
+
+//Subindo um container, rodando o mongodb
+>>> sudo docker run --name mongobarber -p 27017:27017 -d -t mongo
+localhost:27017 // checar se o mongo está rodando
+
+Para conectar a aplicação com o mongodb
+>>> yarn add mongoose
+
+no index.js, acrescentar o método mongo
+
