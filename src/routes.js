@@ -33,7 +33,7 @@ routes.get('/teste', async (req, res) => {
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store); // Login - autenticação
 
-// Autenticação
+/* Autenticação */
 routes.use(authMiddleware); // Aplica em todas as rotas abaixo
 
 // Criação
@@ -49,5 +49,8 @@ routes.get('/schedule', ScheduleController.index);
 // Atualização
 routes.put('/notification/:id', NotificationController.update);
 routes.put('/users', UserController.update);
+
+// Delete
+routes.delete('/appointments/:id', AppointmentController.delete);
 
 export default routes; // Será importado em app.js como global
