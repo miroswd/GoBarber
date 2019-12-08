@@ -300,3 +300,13 @@ Será um método update do NotificationController
 
 /// Cancelando agendamento
 O usuário só poderar cancelar, caso esteja há 2h de distância
+
+
+// Nodemailer
+Enviar um email para o prestador, toda vez que um agendamento for cancelado
+Criando uma config/mail.js
+As credenciais são obtidas através de um serviço de email, no caso será usado o mailtrap,
+que serve apenas para ambiente de desenvolvimento
+
+Criar uma pasta lib, onde ficarão configurações adicionais da aplicação
+Como agora tem o envio do email, o tempo da requisição é maior
