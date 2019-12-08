@@ -257,3 +257,11 @@ Criado o método index no controller
 
 ///Aplicando a paginação
 Através de query, no insominia, fixar um parâmetro
+
+
+
+/// Listando agenda do prestador
+Criar o ScheduleController
+Autenticar-se como provider
+Fazer uma verificação, para ver se o usuario é realmente um provider
+através de query, exibir o dia que quer ver os agendamentos, passar todo o formato da timezone, mas utilizar apenas a data
