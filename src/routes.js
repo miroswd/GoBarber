@@ -47,6 +47,7 @@ routes.get('/providers', ProviderController.index);
 routes.get('/schedule', ScheduleController.index);
 
 // Atualização
+routes.put('/notification/:id', NotificationController.update);
 routes.put('/users', UserController.update);
 
 export default routes; // Será importado em app.js como global

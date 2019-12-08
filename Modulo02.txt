@@ -292,3 +292,6 @@ deletar os agendamentos, para não interferir na criação de novos agendamentos
 NotificationController
 Usando o método find ao invés de findAll, por conta que estamos trabalhando com mongoose
 
+/// Marcando a notificação como lida
+Buscar a notificação pelo o id da notificação
+Será um método update do NotificationController
