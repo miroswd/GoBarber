@@ -287,3 +287,8 @@ No AppointmentController
 
 mongodb compass comunity -> interface gráfica, para visualizar os dados
 deletar os agendamentos, para não interferir na criação de novos agendamentos com o mongodb
+
+/// Listando notificações do usuário
+NotificationController
+Usando o método find ao invés de findAll, por conta que estamos trabalhando com mongoose
+
