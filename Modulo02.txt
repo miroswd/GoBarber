@@ -279,3 +279,13 @@ Para conectar a aplicação com o mongodb
 
 no index.js, acrescentar o método mongo
 
+// Notificando novos agendamentos
+Armazenando notificações dentro do mongo
+
+*No mongo, temos schemas e não tabela*
+
+Dentro da pasta app - schemas
+No AppointmentController
+
+mongodb compass comunity -> interface gráfica, para visualizar os dados
+deletar os agendamentos, para não interferir na criação de novos agendamentos com o mongodb
