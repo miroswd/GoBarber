@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns';
 import pt from 'date-fns/locale/pt'; // Pegando o idioma PT
+
 // Importando models
 import Appointment from '../models/Appointments';
 import File from '../models/File';
@@ -8,6 +9,8 @@ import User from '../models/User';
 
 // Importando Schema
 import Notification from '../schemas/Notification';
+
+import Mail from '../../lib/Mail';
 
 class AppointmentController {
   // Listando agendamentos do usuário
@@ -124,7 +127,9 @@ class AppointmentController {
   // Cancelando/deletando um agendamento
   async delete(req, res) {
     // Deletado através do id do agendamento
-    const appointment = await Appointment.findByPk(req.params.id);
+    const appointment = await Appointment.findByPk(req.params.id, {
+      include: [{ model: User, as: 'provider', attributes: ['name', 'email'] }],
+    });
 
     if (appointment.user_id !== req.userId) {
       // Se não for o dono do agendamento, não pode cancelar
@@ -145,6 +150,13 @@ class AppointmentController {
     appointment.canceled_at = new Date();
 
     await appointment.save();
+
+    // Enviando o email
+    await Mail.sendMail({
+      to: `${appointment.provider.name} <${appointment.provider.email}>`,
+      subject: 'Agendamento cancelado',
+      text: 'Você tem um novo cancelamento',
+    });
 
     return res.json(appointment);
   }
