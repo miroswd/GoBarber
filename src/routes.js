@@ -8,6 +8,7 @@ import User from './app/models/User';
 // Importando Controllers
 import AppointmentController from './app/controllers/AppointmentController';
 import FileController from './app/controllers/FileController';
+import NotificationController from './app/controllers/NotificationController';
 import ProviderController from './app/controllers/ProviderController';
 import UserController from './app/controllers/UserController';
 import ScheduleController from './app/controllers/ScheduleController';
@@ -41,6 +42,7 @@ routes.post('/files', upload.single('file'), FileController.store);
 
 // Exibição
 routes.get('/appointments', AppointmentController.index);
+routes.get('/notifications', NotificationController.index);
 routes.get('/providers', ProviderController.index);
 routes.get('/schedule', ScheduleController.index);
 
