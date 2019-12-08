@@ -38,4 +38,5 @@ Com yarn e node instalados na máquina:
 
 ```js
   $ sudo docker start database
+  $ sudo docker start mongobarber
 ```
