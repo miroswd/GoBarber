@@ -53,7 +53,7 @@ Docker Registry(Docker Hub)  -> Nuvem com as imagens do docker
 
 // Postgres
 https://hub.docker.com/_/postgres
-sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11
+>>> sudo docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres:11
 
 // POSTBIRD -Interface visual para visualizar o postgres
 sudo docker ps -a => exibir os todos os containers
@@ -313,3 +313,30 @@ Como agora tem o envio do email, o tempo da requisição é maior
 Dentro de mail.js
 Instalando templates engines - arquivos html que podem receber variáveis do node
 >>> yarn add express-handlebars nodemailer-express-handlebars
+criadas pastas:
+  app/views/emails/layouts
+    default.hbs
+  app/views/emails/partials
+    footer.hbs
+  app/views/emails
+    cancellation.hbs
+
+// Configurando fila
+Filas - background jobs -> Trabalhos em segundo plano
+Precisa de um banco chave valor
+  Redis (Banco Não relacional)
+    apenas chave e valor, não possui schemas
+
+>>> sudo docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+
+instalando bee-queue - ferramenta de fila, dentro do node
+>>> yarn add bee-queue
+
+lib/Queue.js - Configuro as filas
+
+app/jobs -> Armazena todos os trabalhos em segundo plano
+
+no AppointmentController, tiro a parte de email, coloco na Queue.js
+Retiro o Mail do AppointmentController, e coloco Queue
+
+src/queue.js => Rodar a fila em outro node
