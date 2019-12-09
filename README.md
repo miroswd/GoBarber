@@ -7,6 +7,7 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
 <h2>Ferramentas</h2>
 <ul>
   <li>Bcryptjs</li>
+  <li>Bee-queue</li>
   <li>Date-fns</li>
   <li>Docker</li>
   <li>EditorConfig</li>
@@ -22,6 +23,7 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
   <li>PostBird</li>
   <li>Postgres</li>
   <li>Prettier</li>
+  <li>Redis</li>
   <li>Sequelize</li>
   <li>Sucrase</li>
   <li>Yarn</li>
@@ -42,4 +44,5 @@ Com yarn e node instalados na máquina:
 ```js
   $ sudo docker start database
   $ sudo docker start mongobarber
+  $ sudo docker start redisbarber
 ```
