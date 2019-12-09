@@ -340,3 +340,8 @@ no AppointmentController, tiro a parte de email, coloco na Queue.js
 Retiro o Mail do AppointmentController, e coloco Queue
 
 src/queue.js => Rodar a fila em outro node
+
+// Monitorando filas
+Dentro de lib/Queue.js
+acrescentando o on ao bee
+bee.on('failed', this.method)
