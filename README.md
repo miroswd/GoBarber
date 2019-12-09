@@ -37,7 +37,8 @@ Com yarn e node instalados na máquina:
 
 ```js
   $ yarn #Instala as dependências 
-  $ node src/server.js #Inicia o servidor
+  $ yarn dev #Inicia o servidor
+  $ yarn queue #Roda a fila
 ```
 <p>Rodar o Docker:</p>
 
