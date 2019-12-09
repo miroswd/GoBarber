@@ -310,3 +310,8 @@ que serve apenas para ambiente de desenvolvimento
 
 Criar uma pasta lib, onde ficarão configurações adicionais da aplicação
 Como agora tem o envio do email, o tempo da requisição é maior
+
+// Configurando templates de email - handlebars(guidão?)
+Dentro de mail.js
+Instalando templates engines - arquivos html que podem receber variáveis do node
+>>> yarn add express-handlebars nodemailer-express-handlebars
