@@ -359,3 +359,16 @@ no console do google -> new Date().getTime()
 
 // Campos virtuais
 No Models/Appointment.js
+
+//Tratamento de exceções
+Utilizando ferramentas de monitoramento de erros - SENTRY
+Depois de criar um novo projeto, ele dá algumas instruções
+>>> yarn add @sentry/node@5.10.2
+no app.js, importo o sentry
+crio uma config de sentry
+
+por padrão, os erros q ocorrem com async, o express não consegue captar
+>>> yarn add express-async-errors
+
+tratativa das mensagens de erro
+>>> yarn add youch
