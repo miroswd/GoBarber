@@ -26,7 +26,7 @@ class AppointmentController {
 
       // Ordenando os agendamentos por data
       order: ['date'],
-      attributes: ['id', 'date'],
+      attributes: ['id', 'date', 'past', 'cancelable'],
       limit: 20,
       offset: (page - 1) * 20,
       /* Quantos registros quero pular, para exibir na page,

@@ -354,3 +354,6 @@ Crio um AvailableController
 no insominia -> quey, date será em timestamp
 no console do google -> new Date().getTime()
 1575934362229 // Representação da data atual em número
+
+// Campos virtuais
+No Models/Appointment.js
