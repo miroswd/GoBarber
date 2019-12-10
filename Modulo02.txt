@@ -345,3 +345,12 @@ src/queue.js => Rodar a fila em outro node
 Dentro de lib/Queue.js
 acrescentando o on ao bee
 bee.on('failed', this.method)
+
+
+/// Listando os horários disponíveis
+- Verificar se os horários já passaram
+- Descartar os horários que o prestador estará ocupado
+Crio um AvailableController
+no insominia -> quey, date será em timestamp
+no console do google -> new Date().getTime()
+1575934362229 // Representação da data atual em número
