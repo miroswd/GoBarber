@@ -1,5 +1,11 @@
 import express from 'express';
 import path from 'path';
+import Youch from 'youch';
+
+import * as Sentry from '@sentry/node';
+import sentryConfig from './config/sentry';
+import 'express-async-errors';
+
 import routes from './routes'; // importo o valor exportado de /routes e nomeio ele
 
 import './database'; // Como nenhum valor será retornado, basta importar
@@ -8,11 +14,15 @@ class App {
   constructor() {
     this.server = express();
 
+    Sentry.init(sentryConfig);
+
     this.middlewares();
     this.routes();
+    this.exceptionHandler();
   }
 
   middlewares() {
+    this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json()); // Middleware Global
 
     // Aceita apenas o método get
@@ -29,6 +39,16 @@ class App {
     }) */
 
     this.server.use(routes); // Globalizado o conteúdo de routes
+    this.server.use(Sentry.Handlers.errorHandler());
+  }
+
+  exceptionHandler() {
+    // Impede o carregamento infinito no insomnia
+    this.server.use(async (err, req, res, next) => {
+      // Quando um middleware recebe 4 parâmetros, é um middleware de tratamento de exceções
+      const errors = await new Youch(err, req).toJSON();
+      return res.status(500).json(errors);
+    });
   }
 }
 
