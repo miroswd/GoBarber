@@ -25,8 +25,10 @@ Projeto desenvolvido durante o Bootcamp da Rocketseat, estudando NodeJS, ReactJs
   <li>Prettier</li>
   <li>Redis</li>
   <li>Sequelize</li>
+  <li>Sentry</li>
   <li>Sucrase</li>
   <li>Yarn</li>
+  <li>Youch</li>
   <li>Yup</li>
 </ul>
 
