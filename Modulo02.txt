@@ -372,3 +372,7 @@ por padrão, os erros q ocorrem com async, o express não consegue captar
 
 tratativa das mensagens de erro
 >>> yarn add youch
+
+// Variáveis de ambiente
+criar um arquivo .env na raiz // terão informações confidenciais, não deve ir ao github
+carrego as variáveis ambiente na app
