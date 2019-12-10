@@ -374,3 +374,4 @@ tratativa das mensagens de erro
 // Variáveis de ambiente
 criar um arquivo .env na raiz // terão informações confidenciais, não deve ir ao github
 carrego as variáveis ambiente na app
+>>> yarn add dotenv
