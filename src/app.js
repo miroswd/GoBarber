@@ -1,3 +1,6 @@
+// Carregando as variáveis ambiente
+import 'dotenv/config';
+
 import express from 'express';
 import path from 'path';
 import Youch from 'youch';
@@ -45,9 +48,12 @@ class App {
   exceptionHandler() {
     // Impede o carregamento infinito no insomnia
     this.server.use(async (err, req, res, next) => {
-      // Quando um middleware recebe 4 parâmetros, é um middleware de tratamento de exceções
-      const errors = await new Youch(err, req).toJSON();
-      return res.status(500).json(errors);
+      if (process.env.NODE_ENV === 'development') {
+        // Quando um middleware recebe 4 parâmetros, é um middleware de tratamento de exceções
+        const errors = await new Youch(err, req).toJSON();
+        return res.status(500).json(errors);
+      }
+      return res.status(500).json({ error: 'Internal server error' });
     });
   }
 }
